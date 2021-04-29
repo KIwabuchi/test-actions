@@ -6,4 +6,4 @@ jobs:
     container:
       image: kiwabuchi/metall_test:centos7_min
     steps:
-      - uses: uname -r
+      - run: uname -a
