@@ -6,5 +6,7 @@ jobs:
     container:
       image: kiwabuchi/metall_test:centos7_min
     steps:
-      - run: uname -a
-      - run: ls -ls
+      - name: Log the node version
+        run: |
+          ls -ls /
+          cat /etc/os-release
