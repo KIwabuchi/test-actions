@@ -1,7 +1,7 @@
 name: learn-github-actions
 on: [push]
 jobs:
-  check-bats-version:
+  j0:
     runs-on: ubuntu-latest
     container:
       image: kiwabuchi/metall_test:centos7_min
@@ -11,5 +11,13 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE
           env
-          #ls -ls /
-          #cat /etc/os-release
+  j1:
+    runs-on: ubuntu-latest
+    container:
+      image: kiwabuchi/metall_test:centos7_min
+    steps:
+      - uses: actions/checkout@v2
+      - name: Log the node version
+        run: |
+          cd $GITHUB_WORKSPACE
+          env
