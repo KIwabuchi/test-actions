@@ -9,5 +9,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Log the node version
         run: |
-          ls -ls /
-          cat /etc/os-release
+          echo $GITHUB_WORKSPACE
+          #ls -ls /
+          #cat /etc/os-release
