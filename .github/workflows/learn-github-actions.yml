@@ -7,3 +7,4 @@ jobs:
       image: kiwabuchi/metall_test:centos7_min
     steps:
       - run: uname -a
+      - run: ls -ls
