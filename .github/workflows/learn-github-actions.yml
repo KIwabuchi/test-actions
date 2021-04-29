@@ -3,14 +3,15 @@ on: [push]
 jobs:
   j0:
     runs-on: ubuntu-latest
+    env:
+      METALL_TEST_DIR: ${GITHUB_JOB}
     container:
-      image: kiwabuchi/metall_test:centos7_min 
+      image: kiwabuchi/metall_test:centos7_min
     steps:
       - uses: actions/checkout@v2
       - name: Log the node version
         run: |
           cd $GITHUB_WORKSPACE
-          export METALL_TEST_DIR=${GITHUB_JOB}
           env
           bash script/run.sh
   j1:
